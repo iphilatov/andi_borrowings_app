@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>{% block title %}Заимствования андийских языков{% endblock %}</title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+
+
+    <div class="navbar-nav-scroll">
+      <ul class="navbar-nav bd-navbar-nav flex-row">
+        <li class="nav-item">
+          <a class="nav-link " href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Главная</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/about" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">О проекте</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="https://raw.githubusercontent.com/phon-dicts-project/comparative_andic_dictionary_database/master/andic_dicts.csv" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Словари</a>
+          <div class="select-menu">
+            <div class="select-btn">
+              <span class="sBtn-text">Контакты</span>
+              <i class="bx bx-chevron-down"></i>
+            </div>
+          
+            <ul class="options">
+              <li class="option">
+                <a href="https://t.me/howtouns_s">Анжелика Минченко</a>
+              </li>
+              <li class="option">
+                <a href="https://t.me/iphilatov">Игорь Филатов</a>
+              </li>
+            </ul>
+          </div>
+
+          </li>
+      </ul>
+    </div>
+
+
+    {% block body %}
+
+    {% endblock %}
+  </body>
+</html>
