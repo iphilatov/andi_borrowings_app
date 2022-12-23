@@ -293,7 +293,7 @@ ul .content::-webkit-scrollbar{
   width: 250px;
   height: 305px;
   border-radius: 9px;
-  background: rgba(255, 255, 255, 0.699);
+  background: rgba(255, 255, 255, 0.74);
   font-size: small;
   padding: 25px 28px 45px;
   box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
@@ -305,7 +305,7 @@ ul .content::-webkit-scrollbar{
   width: 250px;
   height: 305px;
   border-radius: 9px;
-  background: rgba(255, 255, 255, 0.699);
+  background: rgba(255, 255, 255, 0.74);
   font-size: small;
   padding: 25px 28px 45px;
   box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
@@ -317,7 +317,7 @@ ul .content::-webkit-scrollbar{
   width: 250px;
   height: 305px;
   border-radius: 9px;
-  background: rgba(255, 255, 255, 0.699);
+  background: rgba(255, 255, 255, 0.74);
   font-size: small;
   padding: 25px 28px 45px;
   box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
@@ -329,7 +329,7 @@ ul .content::-webkit-scrollbar{
   width: 250px;
   height: 305px;
   border-radius: 9px;
-  background: rgba(255, 255, 255, 0.699);
+  background: rgba(255, 255, 255, 0.74);
   font-size: small;
   padding: 25px 28px 45px;
   box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
@@ -341,7 +341,7 @@ ul .content::-webkit-scrollbar{
   width: 250px;
   height: 305px;
   border-radius: 9px;
-  background: rgba(255, 255, 255, 0.699);
+  background: rgba(255, 255, 255, 0.74);
   font-size: small;
   padding: 25px 28px 45px;
   box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
@@ -353,7 +353,7 @@ ul .content::-webkit-scrollbar{
   width: 250px;
   height: 305px;
   border-radius: 9px;
-  background: rgba(255, 255, 255, 0.699);
+  background: rgba(255, 255, 255, 0.74);
   font-size: small;
   padding: 25px 28px 45px;
   box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
@@ -365,7 +365,7 @@ ul .content::-webkit-scrollbar{
   width: 250px;
   height: 305px;
   border-radius: 9px;
-  background: rgba(255, 255, 255, 0.699);
+  background: rgba(255, 255, 255, 0.74);
   font-size: small;
   padding: 25px 28px 45px;
   box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
@@ -377,8 +377,23 @@ ul .content::-webkit-scrollbar{
   width: 250px;
   height: 305px;
   border-radius: 9px;
-  background: rgba(255, 255, 255, 0.699);
+  background: rgba(255, 255, 255, 0.74);
   font-size: small;
+  padding: 25px 28px 45px;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+  align-items: center;
+}
+.home{
+  color: #ffffffda;
+}
+.about{
+  margin-left: 90px;
+  margin-top: 37px;
+  width: 750px;
+  height: 505px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.74);
+  font-size: medium;
   padding: 25px 28px 45px;
   box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
   align-items: center;
