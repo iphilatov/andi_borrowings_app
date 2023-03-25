@@ -61,10 +61,25 @@ function fetchApi(word){
     wrapper.classList.remove("active");
     infoText.style.color = "#000";
     infoText.innerHTML = `Ищу перевод <span>"${word}"</span>`;
-    let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
-    fetch(url).then(response => response.json()).then(result => data(result, word)).catch(() =>{
-        infoText.innerHTML = `К сожалению, в нашем словаре нет слова <span>"${word}"</span>. Попробуйте ввести другое слово.`;
-    });
+    let url = "andic_dicts.json";
+    fetch(url)
+        .then(response => response.json())
+        .then(result => {
+            const keys = Object.keys(result);
+            for (let i = 0; i < keys.length; i++) {
+                const key = keys[i];
+                if (key.includes(word)) {
+                    const value = result[key];
+                    // use value of subkeys here
+                    infoText.innerHTML = `Значение для <span>"${key}"</span>: ${value.meaning_ru}`;
+                    return;
+                }
+            }
+            infoText.innerHTML = `К сожалению, в нашем словаре нет слова <span>"${word}"</span>. Попробуйте ввести другое слово.`;
+        })
+        .catch(() => {
+            infoText.innerHTML = `К сожалению, в нашем словаре нет слова <span>"${word}"</span>. Попробуйте ввести другое слово.`;
+        });
 }
 
 searchInput.addEventListener("keyup", e =>{

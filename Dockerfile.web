@@ -19,6 +19,8 @@ RUN mkdir -p /app/static/{js,css,img}
 COPY static/css/style.css app/static/css/style.css
 COPY static/js/script.js app/static/js/script.js
 COPY static/js/test-hello.json app/static/js/test-hello.json
+COPY static/js/andic_dicts.json app/static/js/andic_dicts.json
+COPY templates/andic_dicts.json app/templates/andic_dicts.json
 COPY static/img/fon.png app/static/img/fon.png
 
 CMD ["python3", "web.py"]

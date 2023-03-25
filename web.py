@@ -5,8 +5,6 @@ import requests
 
 app = Flask(__name__)
 
-#REST_URL = os.environ.get("REST_URL", "http://localhost/")
-
 @app.route('/')
 def startup_base():
     return render_template('home.html.j2')
