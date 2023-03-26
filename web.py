@@ -1,11 +1,9 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_from_directory
 import os
 import json
 import requests
-
+  
 app = Flask(__name__)
-
-#REST_URL = os.environ.get("REST_URL", "http://localhost/")
 
 @app.route('/')
 def startup_base():

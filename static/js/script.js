@@ -57,15 +57,41 @@ function search(word){
     searchInput.value = word;
 }
 
-function fetchApi(word){
+function fetchApi(word) {
     wrapper.classList.remove("active");
     infoText.style.color = "#000";
     infoText.innerHTML = `Ищу перевод <span>"${word}"</span>`;
-    let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
-    fetch(url).then(response => response.json()).then(result => data(result, word)).catch(() =>{
+    let url = "/static/js/andic_dicts.json";
+    fetch(url)
+      .then((response) => response.json())
+      .then((result) => {
+        const keys = Object.keys(result);
+        for (let i = 0; i < keys.length; i++) {
+          const key = keys[i];
+          if (key.includes(word)) {
+            const value = result[key];
+            // use value of subkeys here
+            const meaning_ru = value.meaning_ru;
+            const definition = value.definition;
+            const ipa = value.ipa;
+            const language = value.language;
+            const concepticon = value.concepticon;
+            const source = value.source;
+            const borrowing_source_language = value.borrowing_source_language;
+            const borrowing_source_transcription = value.borrowing_source_transcription;
+            const borrowing_modified = value.borrowing_modified;
+            const borrowing_annotator = value.borrowing_annotator;
+            const pos = value.pos;
+            infoText.innerHTML = `Значение для <span>"${key}"</span>: ${meaning_ru}<br><br> ${definition}<br><br> ${ipa}<br><br> ${language}<br><br> ${concepticon}<br><br> ${source}<br><br> ${borrowing_source_language}<br><br> ${borrowing_source_transcription}<br><br> ${borrowing_modified}<br><br> ${borrowing_annotator}<br><br> ${pos}`;
+            return;
+          }
+        }
         infoText.innerHTML = `К сожалению, в нашем словаре нет слова <span>"${word}"</span>. Попробуйте ввести другое слово.`;
-    });
-}
+      })
+      .catch(() => {
+        infoText.innerHTML = `К сожалению, в нашем словаре нет слова <span>"${word}"</span>. Попробуйте ввести другое слово.`;
+      });
+  }
 
 searchInput.addEventListener("keyup", e =>{
     let word = e.target.value.replace(/\s+/g, ' ');
