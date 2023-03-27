@@ -2,7 +2,7 @@
 
 This repository contains the first version of the web service for searching borrowed word in Andi languages of Nakh-Dagestani language family.
 
-Currently, it does not support the search as the database is still in works. The website is available only in Russian for now, and there are plans for its version in English.
+Currently, it only supports the search of words and all the information about them as the database is still in works. The website is available only in Russian for now, and there are plans for its version in English.
 
 The service is supposed to find borrowed words in such languages as:
 
